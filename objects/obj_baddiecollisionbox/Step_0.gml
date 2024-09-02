@@ -234,7 +234,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					hitLag = lag;
 					hitX = x;
 					hitY = y;
-					invtime = lag + 5;
+					invtime = lag + 0;
 					mach2 = true;
 				}
 				tauntstoredstate = state;

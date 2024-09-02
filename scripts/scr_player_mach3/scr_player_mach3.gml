@@ -10,7 +10,7 @@ function scr_player_mach3()
 		case "P":										 
 			var slopeaccel = 0.1;
 			var slopedeccel = 0.2;
-			var mach4movespeed = 20;
+			var mach4movespeed = 200000;
 			var mach3movespeed = 16;
 			var accel = 0.025;
 			var mach4accel = 0.1;

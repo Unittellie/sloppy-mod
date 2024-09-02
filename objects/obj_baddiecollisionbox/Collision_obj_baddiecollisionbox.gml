@@ -7,7 +7,7 @@ if (instance_exists(baddieID) && instance_exists(other.baddieID) && baddieID.obj
 		global.combotime = 60;
 		global.heattime = 60;
 	}
-	var lag = 5;
+	var lag = 0;
 	if (baddieID.object_index != obj_tank || baddieID.hp <= 0)
 	{
 		baddieID.hitLag = lag;

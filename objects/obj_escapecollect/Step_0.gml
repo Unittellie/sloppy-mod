@@ -6,6 +6,8 @@ if (distance_to_object(obj_player) < 10)
 {
 	if global.timeattack == 1
 		instance_destroy();
+	if global.laps > 0
+		global.fill += 15;
 }
 if (place_meeting(x, y, obj_destructibles))
 	depth = 102;

@@ -155,6 +155,7 @@ if obj_player.state != states.dead
 	var num = string_length(str);
 	var w = string_width(str);
 	var xx = hud_xx - (w / 2);
+	
 	if lastcollect != sc
 	{
 		color_array = array_create(num, 0);
@@ -179,4 +180,11 @@ if obj_player.state != states.dead
 	draw_set_color(c_white);
 	if obj_player1.character == "V"
 		draw_text(200 + healthshake, 125 + healthshake, global.playerhealth);
+}
+if global.laps >= 1
+{
+	draw_set_valign(fa_center)
+	draw_set_halign(fa_middle)
+	draw_set_font(global.smallfont)
+	draw_text(obj_screensizer.actual_width / 2, 523, "LAPS : " + string(global.laps + 1))
 }

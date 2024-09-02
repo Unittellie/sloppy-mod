@@ -124,30 +124,6 @@ add_option_press(video_menu, 0, "option_back", function()
 	menu_goto(menus.options);
 });
 
-if !steam_utils_is_steam_running_on_steam_deck()
-{
-	add_option_press(video_menu, 1, "option_window_mode", function()
-	{
-		menu_goto(menus.window);
-	});
-
-	var res = [];
-	for (var i = 0; i < array_length(global.resolutions[obj_screensizer.aspect_ratio]); i++)
-	{
-		var b = global.resolutions[obj_screensizer.aspect_ratio][i];
-		array_push(res, create_option_value(concat(b[0], "X", b[1]), i, false));
-	}
-
-	add_option_multiple(video_menu, 2, "option_resolution", res, function(val)
-	{
-		ini_open_from_string(obj_savesystem.ini_str_options);
-		ini_write_real("Option", "resolution", val);
-		obj_savesystem.ini_str_options = ini_close();
-		global.option_resolution = val;
-		screen_apply_size();
-	}).value = global.option_resolution;
-}
-
 add_option_toggle(video_menu, 3, "option_vsync", function(val)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);

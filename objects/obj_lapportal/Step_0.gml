@@ -21,7 +21,6 @@ if ((global.panic || instance_exists(obj_wartimer)) && sprite_index != spr_pizza
 				fmod_event_one_shot_3d("event:/sfx/misc/lapenter", x, y);
 				if (ds_list_find_index(global.saveroom, other.id) == -1)
 				{
-					ds_list_add(global.saveroom, other.id);
 					global.collect += 3000;
 					global.combotime = 60;
 					with (instance_create(x, y, obj_smallnumber))

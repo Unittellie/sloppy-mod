@@ -208,12 +208,6 @@ function get_options()
 	global.option_screenshake = ini_read_real("Option", "screenshake", 1);
 	global.lang = global.option_lang;
 	
-	if true && steam_utils_is_steam_running_on_steam_deck() // "true" os check?
-	{
-		global.option_fullscreen = 1;
-		global.option_resolution = 1;
-	}
-	
 	ini_close();
 	screen_apply_fullscreen(global.option_fullscreen);
 	obj_screensizer.start_sound = false;

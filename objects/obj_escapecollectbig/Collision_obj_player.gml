@@ -6,6 +6,8 @@ if image_alpha == 1
 	{
 		if obj_player1.character == "V"
 			global.playerhealth = clamp(global.playerhealth + 10, 0, 100);
+		if global.laps > 0
+		global.fill += 60;
 		global.heattime = 60;
 		with obj_camera
 			healthshaketime = 60;

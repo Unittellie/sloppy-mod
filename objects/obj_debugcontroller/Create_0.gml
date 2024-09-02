@@ -21,9 +21,8 @@ if !DEBUG
 			DEBUG = true;
 	}
 }
-if !DEBUG
-	instance_destroy();
-if DEBUG
+
+if DEBUG || !DEBUG
 {
 	active = false;
 	showoverlay = false;
@@ -305,6 +304,11 @@ if DEBUG
 			with obj_hardmode
 				event_perform(ev_other, ev_room_start);
 		}
+	});
+	PIZZAFACE = new DebugCommand("pizzaface", "spawns pizzaface lol lol lol :3", "", function()
+	{
+		instance_create(obj_player1.x, obj_player1.y, obj_pizzaface);
+		fmod_event_one_shot("event:/sfx/pizzaface/laugh");
 	});
 	PLAYER_SET_STATE = new DebugCommand("player_set_state", "Changes the player state", "<states.state>", function(_state)
 	{
