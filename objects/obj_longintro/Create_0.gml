@@ -1,3 +1,4 @@
+player_index = 0
 scene = -2;
 scenebuffer = 0;
 instance_destroy(obj_pigtotal);
